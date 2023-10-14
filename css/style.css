@@ -122,6 +122,7 @@ h2,
 
 a {
   display: inline-block;
+  color: #C1A887;
 }
 
 button {
@@ -702,6 +703,7 @@ button {
 
 .footer-area .single-footer-widget ul li a {
   color: #7b838a;
+  line-height: normal;
 }
 
 .footer-area .single-footer-widget ul li a:hover {
@@ -893,7 +895,7 @@ button {
 
   0%,
   33.33% {
-    background-image: url("https://www.chettinadresorts.in/images/gallery5-5.jpg");
+    background-image: url("../img/gallery/g5.png");
   }
 
   33.34%,
@@ -903,7 +905,7 @@ button {
 
   66.67%,
   100% {
-    background-image: url("https://www.chettinadresorts.in/images/gallery4-4.jpg");
+    background-image: url("../img/gallery/laksmi.png");
   }
 }
 
@@ -953,8 +955,8 @@ button {
 }
 
 .home-banner-btn:hover {
-  background: #C1A887;
-  color: #fff;
+  background: #C1A887 !important;
+  color: #fff !important;
 }
 
 /*=================== home banner end ====================*/
@@ -1403,7 +1405,9 @@ button {
 
 .card-special__title {
   margin: 0;
-  font-weight: 400;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 22px !important;
   transition: all .4s ease;
 }
 
@@ -1643,9 +1647,9 @@ button {
 }
 
 .button--active:hover {
-  background: transparent;
+  background: transparent !important;
   border-color: #C1A887;
-  color: #222222;
+  color: #222222 !important;
 }
 
 .button-contact {
@@ -1897,7 +1901,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: rgba(1, 2, 11, 0.7); */
+  background: rgba(1, 2, 11, 0.5);
   z-index: -1;
 }
 
@@ -2350,10 +2354,20 @@ button {
   color: #C1A887;
 }
 
+.blog_right_sidebar .popular_post_widget .post_item {
+  display: flex;
+  flex-direction: row;
+}
+
+.blog_right_sidebar .popular_post_widget .post_item:hover {
+  background-color: #f3f3f3;
+}
+
 .blog_right_sidebar .popular_post_widget .post_item .media-body {
   justify-content: center;
   align-self: center;
   padding-left: 20px;
+  text-align: left;
 }
 
 .blog_right_sidebar .popular_post_widget .post_item .media-body h3 {
@@ -2370,6 +2384,7 @@ button {
 
 .blog_right_sidebar .popular_post_widget .post_item .media-body p {
   font-size: 12px;
+  color: #303030;
   line-height: 21px;
   margin-bottom: 0px;
 }
@@ -2935,7 +2950,9 @@ button {
   overflow: hidden;
 }
 
-.dbutton, .button__icon, .button__text {
+.dbutton,
+.button__icon,
+.button__text {
   transition: all 0.3s;
 }
 
