@@ -8,6 +8,24 @@
       form.setAttribute("data-email", "my3forms@gmail.com");
   });
 
+  //  Photo Shoot booking
+  document.addEventListener("DOMContentLoaded", function () {
+      var form = document.getElementById("photoForm");
+      form.setAttribute("action",
+          "https://script.google.com/macros/s/AKfycbzblxD_F3jJn0ZjeMnOqZFln0MuhK_bAq9yNxjZdKr3vPHllqWHko8ftNjtAXoXyKcV/exec"
+      );
+      form.setAttribute("data-email", "my3forms@gmail.com");
+  });
+
+
+  //  Annamalayar Mandapam Bookings 
+  document.addEventListener("DOMContentLoaded", function () {
+      var form = document.getElementById("hallForm");
+      form.setAttribute("action",
+          "https://script.google.com/macros/s/AKfycbyQ3GGcyYE5BFou7DwPCoRbrUM3kxGeTJOv1wHbortA8gSPk7vW350PvLuYggoWD-BN/exec"
+      );
+      form.setAttribute("data-email", "my3forms@gmail.com");
+  });
   (function () {
       function validEmail(email) {
           var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
@@ -121,3 +139,51 @@
           }
       }
   })();
+
+
+  // browser details, deviceType and url details
+
+  document.addEventListener("DOMContentLoaded", function () {
+      var urlInput = document.getElementById("geturl");
+      urlInput.value = window.location.href;
+  });
+
+  // Detect the user's browser and get the Browser Name
+  var browserName = detectBrowser();
+
+  // Set the value of the input field with the Browser Name
+  document.getElementById("browserName").value = browserName;
+
+  function detectBrowser() {
+      var userAgent = navigator.userAgent;
+      var browserName = "Unknown";
+
+      if (userAgent.indexOf("Chrome") != -1) {
+          browserName = "Google Chrome";
+      } else if (userAgent.indexOf("Firefox") != -1) {
+          browserName = "Mozilla Firefox";
+      } else if (userAgent.indexOf("Safari") != -1) {
+          browserName = "Apple Safari";
+      } else if (userAgent.indexOf("MSIE") != -1 || userAgent.indexOf("Trident") != -1) {
+          browserName = "Internet Explorer";
+      } else if (userAgent.indexOf("Edge") != -1) {
+          browserName = "Microsoft Edge";
+      } else if (userAgent.indexOf("Opera") != -1 || userAgent.indexOf("OPR") != -1) {
+          browserName = "Opera";
+      }
+      return browserName;
+  }
+
+  // Detect the user's device type and get the device type
+  var deviceType = detectDeviceType();
+
+  // Set the value of the input field with the device type
+  document.getElementById("deviceType").value = deviceType;
+
+  function detectDeviceType() {
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          return "Mobile Device";
+      } else {
+          return "Desktop Device";
+      }
+  } 
