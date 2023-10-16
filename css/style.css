@@ -918,7 +918,6 @@ button {
   position: relative;
   z-index: 1;
   animation: changeBackground 10s infinite;
-  /* 3s per image, 3 images */
 }
 
 @keyframes changeBackground {
@@ -930,7 +929,7 @@ button {
 
   33.34%,
   66.66% {
-    background-image: url("../img/gallery/001.png");
+    background-image: url("../img/gallery/001.jpg");
   }
 
   66.67%,
@@ -1357,7 +1356,7 @@ button {
 /*=================== news section end ====================*/
 /*=================== video section start ====================*/
 .video-area {
-  background: url("../img/gallery/vid-bg.png") left center no-repeat;
+  background: url("../img/gallery/vid-bg.jpg") left center no-repeat;
   background-size: cover;
   padding: 50px 10px;
   position: relative;
