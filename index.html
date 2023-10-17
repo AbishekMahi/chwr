@@ -198,8 +198,7 @@
       method="POST" id="bookForm">
       <div class="container">
         <center>
-          <h3>Book Now</h3>
-          <p></p>
+          <h5>Book Cottages</h5>
         </center>
         <div class="form-elements">
           <!-- Honeypot Field (hidden from users) -->
@@ -207,13 +206,13 @@
             <input type="text" name="honeypot" value="">
           </div>
           <div class="row">
-            <div class="col-sm  col-md-3 gutters-19">
+            <div class="col-sm col-md-4 gutters-19">
               <div class="form-group">
                 <input class="form-control" type="text" placeholder="Enter Name *" id="name" name="Name" required>
                 <div class="invalid-feedback">Please fill out your name.</div>
               </div>
             </div>
-            <div class="col-sm  col-md-3 gutters-19">
+            <div class="col-sm  col-md-4 gutters-19">
               <div class="form-group">
                 <input class="form-control" type="email" placeholder="Enter Email *"
                   pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
@@ -222,25 +221,25 @@
               </div>
             </div>
 
-            <div class="col-sm col-md-3 gutters-19">
+            <div class="col-sm col-md-4 gutters-19">
               <div class="form-group">
-                <input type="text" autocomplete="off" name="From Date" class="form-control" id="startDate"
-                  data-provide="datepicker" placeholder="Select From Date" required>
-              </div>
-            </div>
-            <div class="col-sm  col-md-3 gutters-19">
-              <div class="form-group">
-                <input type="text" autocomplete="off" name="To Date" class="form-control" id="endDate"
-                  data-provide="datepicker" placeholder="Select To Date" required>
+                <input class="form-control" type="tel" pattern="[789][0-9]{9}" placeholder="Mobile Number *"
+                  name="Phone" required>
+                <div class="invalid-feedback">Please enter valid mobile number.</div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-sm col-md-3 gutters-19">
               <div class="form-group">
-                <input class="form-control" type="tel" pattern="[789][0-9]{9}" placeholder="Mobile Number *"
-                  name="Phone" required>
-                <div class="invalid-feedback">Please enter valid mobile number.</div>
+                <input type="text" autocomplete="off" name="From Date" class="form-control" id="startDate"
+                  data-provide="datepicker" placeholder="Date Check in" required>
+              </div>
+            </div>
+            <div class="col-sm  col-md-3 gutters-19">
+              <div class="form-group">
+                <input type="text" autocomplete="off" name="To Date" class="form-control" id="endDate"
+                  data-provide="datepicker" placeholder="Date Check Out" required>
               </div>
             </div>
             <div class="col-sm col-md-3 gutters-19">
@@ -258,10 +257,34 @@
                 </div>
               </div>
             </div>
+
+            <div class="col-sm col-md-3 gutters-19">
+              <div class="form-group">
+                <select class="form-select" name="Pets" required>
+                  <option value="" disabled selected>Any Pets ?</option>
+                  <option value="No">No Pet</option>
+                  <option value="Yes">Yes</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
             <div class="col-sm col-md-3 gutters-19">
               <div class="form-group">
                 <input class="form-control" type="number" name="No. of rooms" placeholder="No. of rooms *" required>
-                <div class="invalid-feedback">Please fill out this field.</div>
+                <div class="invalid-feedback">Please enter no. of rooms.</div>
+              </div>
+            </div>
+            <div class="col-sm col-md-3 gutters-19">
+              <div class="form-group">
+                <input class="form-control" type="number" name="No. of Adults" placeholder="No. of Adults" required>
+                <div class="invalid-feedback">Please enter no. of Adults.</div>
+              </div>
+            </div>
+            <div class="col-sm col-md-3 gutters-19">
+              <div class="form-group">
+                <input class="form-control" type="number" name="No. of Children" placeholder="No. of Children" required>
+                <div class="invalid-feedback">Please enter no. of children.</div>
               </div>
             </div>
             <input type="url" name="Booked in this URL" id="geturl" required hidden readonly value="">
@@ -274,6 +297,8 @@
               </div>
             </div>
           </div>
+          <p><em>* Note : Please read our <a href="terms.html">Terms and Policies</a> before booking. *</em></p>
+
         </div>
         <!-- Thankyou_message -->
         <div class="thankyou_message" style="display:none;">
@@ -284,15 +309,15 @@
               </lottie-player>
             </div>
           </center>
-          <h5 style="text-align: center;">Thank you! <span id="demo"></span>
+          <h6 style="text-align: center;">Thank you! <span id="demo"></span>
             <script>
               function myFunction() {
                 var x = document.getElementById("name").value;
                 document.getElementById("demo").innerHTML = x;
               }
             </script>
-            <br> Your booking has been successfully processed. <br> We look forward to welcoming you.
-          </h5>
+            <br> Your booking has been successfully processed. <br> We will reach you soon for the confirmation.
+          </h6>
           <br>
         </div>
       </div>
@@ -356,14 +381,14 @@
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="card card-explore">
               <div class="card-explore__img">
-                <img class="card-img" src="img\gallery\bangla.jpg" alt="Bangala Comfort">
+                <img class="card-img" src="img/gallery/bangla.jpg" alt="Bangala Comfort">
               </div>
               <div class="card-body">
                 <!-- <h3 class="card-explore__price">$150.00 <sub>/ Per Night</sub></h3> -->
                 <h4 class="card-explore__title"><a href="cottages.html">Bangala Comfort </a></h4>
-                <p>Compact and Comfort rooms, cuddled within an ancient Chettinad Bangala, that has a beautiful peep
-                  through the window...</p>
-                <a class="card-explore__link" href="cottages.html">Know More <i class="ti-arrow-right"></i></a>
+                <p>Tucked alongside the Oorani, our Bangala Comfort - Oorani View offers a comfortable space with a
+                  spacious Thinnai to relax.</p>
+                <a class="card-explore__link" href="cottages.html">Read More <i class="ti-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -377,8 +402,8 @@
                 <!-- <h3 class="card-explore__price">$170.00 <sub>/ Per Night</sub></h3> -->
                 <h4 class="card-explore__title"><a href="cottages.html">Marakkalam</a></h4>
                 <p>This is conceptualized based on a ship. The Wood House has a spectacular window view overlooking the
-                  Mettupatti reservoir...</p>
-                <a class="card-explore__link" href="cottages.html">Know More <i class="ti-arrow-right"></i></a>
+                  Mettupatti reservoir.</p>
+                <a class="card-explore__link" href="cottages.html">Read More <i class="ti-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -386,14 +411,14 @@
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="card card-explore">
               <div class="card-explore__img">
-                <img class="card-img" src="img/gallery/001.jpg" alt="">
+                <img class="card-img" src="img/gallery/laksmi.jpg" alt="">
               </div>
               <div class="card-body">
                 <!-- <h3 class="card-explore__price">$190.00 <sub>/ Per Night</sub></h3> -->
                 <h4 class="card-explore__title"><a href="cottages.html">Lakshmi Cottages </a></h4>
-                <p>Each cottage takes it's significance from the 8 forms of Goddess Lakshmi. A spacious abode fitted
-                  with well crafted antique... </p>
-                <a class="card-explore__link" href="cottages.html">Know More <i class="ti-arrow-right"></i></a>
+                <p>Discover the perfect cottage resonating with your spirit as you celebrate the divine grace of Goddess
+                  Lakshmi, each dedicated to one of her eight forms.</p>
+                <a class="card-explore__link" href="cottages.html">Read More <i class="ti-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -470,7 +495,7 @@
               <div class="card-body">
                 <p>Discover well-being at Savukkai, where ancient wisdom and modern therapies unite to nurture your
                   body, mind, and soul. </p>
-                <a class="card-explore__link mt-2" href="savukkai.html">Know More <i class="ti-arrow-right"></i></a>
+                <a class="card-explore__link mt-2" href="savukkai.html">Book Now <i class="ti-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -486,7 +511,7 @@
               <div class="card-body">
                 <p>Experience the magnificence of Annamalayar Mandapam, a majestic hall that accommodates up to 150
                   guests for your special gatherings and events. </p>
-                <a class="card-explore__link mt-2" href="annamalayar-mandapam.html">Know More <i
+                <a class="card-explore__link mt-2" href="annamalayar-mandapam.html">Book Now <i
                     class="ti-arrow-right"></i></a>
               </div>
             </div>
@@ -503,7 +528,7 @@
               <div class="card-body">
                 <p>Savor the authentic flavors of Chettinad cuisine, thoughtfully crafted by skilled chefs using
                   locally-sourced ingredients. It's not just delicious; it's a visual delight. </p>
-                <a class="card-explore__link mt-2" href="restaurant.html">Know More <i class="ti-arrow-right"></i></a>
+                <a class="card-explore__link mt-2" href="restaurant.html">Read More <i class="ti-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -519,7 +544,7 @@
               <div class="card-body">
                 <p>Embark on enriching tours and shopping experiences to discover the cultural and historical treasures
                   of Chettinad. </p>
-                <a class="card-explore__link mt-2" href="tours.html">Know More <i class="ti-arrow-right"></i></a>
+                <a class="card-explore__link mt-2" href="tours.html">Read More <i class="ti-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -535,7 +560,7 @@
               <div class="card-body">
                 <p>Our stunning heritage architecture and scenic layout offer a fantastic backdrop for unforgettable
                   photo shoots.</p>
-                <a class="card-explore__link mt-2" href="photo-shoot.html">Know More <i class="ti-arrow-right"></i></a>
+                <a class="card-explore__link mt-2" href="photo-shoot.html">Book Now <i class="ti-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -853,6 +878,7 @@
             <li><a href="features.html">Features</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="terms.html">Terms and Policies</a></li>
           </ul>
         </div>
         <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget" data-wow-duration="1s" data-wow-delay="0.8s">

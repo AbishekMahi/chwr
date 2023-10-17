@@ -171,7 +171,7 @@
       </div>
       <div class="row">
         <div class="col-lg-8 mb-30px">
-          <form class="form-search php-email-form gform pure-form pure-form-stacked" role="form" method="POST"
+          <form class="form-search php-email-form gform pure-form pure-form-stacked p-lg-5" role="form" method="POST"
             id="bookForm">
             <div class="form-elements">
               <!-- Honeypot Field (hidden from users) -->
@@ -182,7 +182,7 @@
               <div class="row">
                 <div class="col-sm  col-md-6 gutters-19">
                   <div class="form-group">
-                    <!-- <label for="name">Name</label> -->
+                    <label class="label">Full Name *</label>
                     <input class="form-control" type="text" placeholder="Enter Name *" id="name" name="Name" required>
                     <!-- <div class="valid-feedback">Valid.</div> -->
                     <div class="invalid-feedback">Please fill out your name.</div>
@@ -191,14 +191,15 @@
 
                 <div class="col-sm col-md-6 gutters-19">
                   <div class="form-group">
+                    <label class="label">Mobile Number *</label>
                     <input class="form-control" type="tel" pattern="[6789][0-9]{9}" placeholder="Mobile Number *"
                       name="Phone" required>
-                    <!-- <div class="valid-feedback">Valid.</div> -->
                     <div class="invalid-feedback">Please enter valid mobile number.</div>
                   </div>
                 </div>
                 <div class="col-sm  col-md-12 gutters-19">
                   <div class="form-group">
+                    <label class="label">Email Address *</label>
                     <input class="form-control" type="email" placeholder="Enter Email *"
                       pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
                       name="Email" required>
@@ -208,16 +209,18 @@
                 </div>
                 <div class="col-sm col-md-6 gutters-19">
                   <div class="form-group">
+                    <label class="label">Date Check in *</label>
                     <input type="text" autocomplete="off" name="From Date" class="form-control" id="startDate"
-                      data-provide="datepicker" placeholder="Select From Date" required>
+                      data-provide="datepicker" placeholder="Date Check In" required>
                     <!-- <div class="valid-feedback">Valid.</div> -->
                     <div class="invalid-feedback">Please select the date.</div>
                   </div>
                 </div>
                 <div class="col-sm col-md-6 gutters-19">
                   <div class="form-group">
+                    <label class="label">Date check out *</label>
                     <input type="text" autocomplete="off" name="To Date" class="form-control" id="endDate"
-                      data-provide="datepicker" placeholder="Select To Date" required>
+                      data-provide="datepicker" placeholder="Date Check Out" required>
                     <!-- <div class="valid-feedback">Valid.</div> -->
                     <div class="invalid-feedback">Please select the date.</div>
                   </div>
@@ -245,8 +248,9 @@
                 <div class="col-sm col-md-12 gutters-19">
                   <div class="form-group">
                     <div>
+                      <label class="label">Select Cottage *</label>
                       <select class="form-select" name="Cottage Name" required>
-                        <option value="" disabled selected>Pick Room Type & Tariff * </option>
+                        <option value="" disabled selected>Pick Room Type</option>
                         <option value="Bangala Comfort">Bangala Comfort</option>
                         <option value="Bangala Suite">Bangala Suite</option>
                         <option value="Bangala Valavu">Bangala Valavu</option>
@@ -256,26 +260,50 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm col-md-12 gutters-19">
+                <div class="col-sm col-md-6 gutters-19">
                   <div class="form-group">
-                    <div class="form-group">
-                      <input class="form-control" type="number" name="No. of rooms" placeholder="No. of rooms *"
-                        required>
-                      <div class="invalid-feedback">Please fill out this field.</div>
-                    </div>
+                    <label class="label">Any Pets ?</label>
+                    <select class="form-select" name="Pets" required>
+                      <option value="" disabled selected>Any Pets ?</option>
+                      <option value="No">No</option>
+                      <option value="Yes">Yes</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm col-md-6 gutters-19">
+                  <div class="form-group">
+                    <label class="label">No. of rooms *</label>
+
+                    <input class="form-control" type="number" name="No. of rooms" placeholder="No. of rooms" required>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+                </div>
+                <div class="col-sm col-md-6 gutters-19">
+                  <div class="form-group">
+                    <label class="label">No. of Adults *</label>
+                    <input class="form-control" type="number" name="No. of Adults" placeholder="No. of Adults" required>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+                </div>
+                <div class="col-sm col-md-6 gutters-19">
+                  <div class="form-group">
+                    <label class="label">No. of Children *</label>
+                    <input class="form-control" type="number" name="No. of Children" placeholder="No. of Children"
+                      required>
+                    <div class="invalid-feedback">Please fill out this field.</div>
                   </div>
                 </div>
               </div>
               <input type="url" name="Booked in this URL" id="geturl" required hidden readonly value="">
-							<input type="text" name="Device Type" id="deviceType" required hidden readonly value="">
-							<input type="text" name="Browser Name" id="browserName" required hidden readonly value="">
-              <p><em>Note: By Clicking 'Book Now' you agree to our <a href="#">Terms & Conditions</a>.</em></p>
+              <input type="text" name="Device Type" id="deviceType" required hidden readonly value="">
+              <input type="text" name="Browser Name" id="browserName" required hidden readonly value="">
+              <p><em>* Note : Please read our <a href="#terms">Terms and Policies</a> before booking. *</em></p>
               <div class="row justify-content-center">
-                <div class="col-md-4 col-12 gutters-19">
-                  <div class="form-group">
-                    <button class="button button--active home-banner-btn mt-2" id="button" type="submit"
-                      onclick="myFunction()">Book Now</button>
-                  </div>
+                <div class="col-md-5 col-12 gutters-19">
+                  <!-- <div class="form-group"> -->
+                  <button class="button button--active home-banner-btn mt-2" id="button" type="submit"
+                    onclick="myFunction()">Book Now</button>
+                  <!-- </div> -->
                 </div>
               </div>
             </div>
@@ -288,15 +316,15 @@
                   </lottie-player>
                 </div>
               </center>
-              <h5 style="text-align: center;">Thank you! <span id="demo"></span>
+              <h6 style="text-align: center;">Thank you! <span id="demo"></span>
                 <script>
                   function myFunction() {
                     var x = document.getElementById("name").value;
                     document.getElementById("demo").innerHTML = x;
                   }
                 </script>
-                <br> Your booking has been successfully processed. <br> We look forward to welcoming you.
-              </h5>
+                <br> Your booking has been successfully processed. <br> We will reach you soon for the confirmation.
+              </h6>
               <br>
             </div>
           </form>
@@ -313,7 +341,70 @@
               });
             });
           </script>
+          <div class="form-search mt-4 p-lg-5" id="terms">
+            <center>
+              <h3 class="pb-2">Terms and Policies</h3>
+            </center>
+            <h5>Booking Policy:</h5>
+            <ol>
+              <li><b>Room Reservation:</b> A room is considered confirmed upon receipt of 50% of the payment.</li>
+              <li><b>Payment Deadline:</b> Payment must be received within 3 business days of booking confirmation to
+                secure the reservation.</li>
+              <li><b>Unpaid Reservations:</b> Failure to make the payment within the stipulated time may result in the
+                release of the room. Room allocation is not guaranteed until 50% payment is received.</li>
+              <li><b>Reconfirmation:</b> If payment is not received within 3 business days, the room will be released
+                and must be reconfirmed based on availability.</li>
+            </ol>
 
+            <h5>Room Cancellation Policy:</h5>
+            <ol>
+              <li><b>Full Refund:</b> If a room is canceled 3 days before the arrival date, 100% of the advance amount
+                will be refunded.</li>
+              <li><b>Partial Refund:</b> If a room is canceled 2 days before the arrival date, a 50% refund of the
+                advance amount will be granted.</li>
+              <li><b>No Refund:</b> If a room is canceled 1 day before or on the arrival date, the advance amount will
+                not be refunded.</li>
+            </ol>
+
+
+            <h5>Pet Policy:</h5>
+            <ol>
+              <li><b>Pet Limit: </b>Only 1 pet per room is allowed.</li>
+              <li><b>Pet Containment: </b>Pets should be on a leash or in their cage/container when in common areas.
+              </li>
+              <li><b>Safety Deposit: </b>A safety deposit of Rs 5,000 is required upon check-in, refundable upon
+                check-out.</li>
+              <li><b>Responsibility for Damages: </b>Room guests are responsible for any damages caused by pets during
+                their stay, and the amount will be deducted from the safety deposit. If the amount exceeds the deposit,
+                additional charges will apply.</li>
+              <li><b>Room Hygiene: </b>Daily room cleaning and inspection are required to maintain hygiene standards.
+              </li>
+              <li><b>Respectful Behavior: </b>It is the guest's responsibility to prevent any disturbances to other
+                guests.</li>
+            </ol>
+
+            <h5>Room Policy:</h5>
+            <ol>
+              <li><b>Occupancy Rates: </b> Room rates are based on double occupancy.</li>
+              <li><b>Extra Bed: </b>Only one extra bed is allowed in each room.</li>
+              <li><b>Complimentary Breakfast: </b>Complimentary breakfast is provided to room guests, including those
+                with extra beds. Non-room guests will be charged for breakfast.</li>
+              <li><b>Room Duration: </b>Rooms are provided for a 24-hour period. Delays of more than 3 hours are
+                considered an additional day and will be charged accordingly.</li>
+              <li><b>Meal Timings:</b>
+                <ul>
+                  <li>Breakfast: 8 AM to 10 AM</li>
+                  <li>Lunch: 1 PM to 2:45 PM</li>
+                  <li>Dinner: 8 PM to 10:30 PM</li>
+                </ul>
+              </li>
+              <li><b>Room Service Charges: </b>Food and beverages served in the room will incur additional room charges.
+              </li>
+              <li><b>No Smoking: </b>Smoking inside rooms or in common areas is not permitted. Violations will result in
+                a charge of Rs 4,000/-.</li>
+            </ol>
+
+          </div>
         </div>
         <div class="col-lg-4">
           <div class="blog_right_sidebar comment-form">
@@ -384,6 +475,7 @@
             <li><a href="features.html">Features</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="terms.html">Terms and Policies</a></li>
           </ul>
         </div>
 

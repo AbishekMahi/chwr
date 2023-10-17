@@ -2400,6 +2400,13 @@ textarea.form-control {
     font-size: 80%;
 }
 
+.label {
+    width: 100%;
+    margin-left: .25rem;
+    margin-bottom: .25rem;
+    font-size: 80%;
+}
+
 .invalid-tooltip {
     position: absolute;
     top: 100%;
