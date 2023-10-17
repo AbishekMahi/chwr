@@ -276,16 +276,27 @@
               </div>
             </div>
             <div class="col-sm col-md-3 gutters-19">
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <input class="form-control" type="number" name="No. of Adults" placeholder="No. of Adults" required>
                 <div class="invalid-feedback">Please enter no. of Adults.</div>
-              </div>
+              </div> -->
+              <select class="form-select" name="No. of Adults" required>
+                <option value="" disabled selected>No. of Adults</option>
+                <option value="1">1 Adult</option>
+                <option value="2">2 Adults</option>
+              </select>
             </div>
             <div class="col-sm col-md-3 gutters-19">
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <input class="form-control" type="number" name="No. of Children" placeholder="No. of Children" required>
                 <div class="invalid-feedback">Please enter no. of children.</div>
-              </div>
+              </div> -->
+              <select class="form-select" name="No. of Children" required>
+                <option value="" disabled selected>No. of Children</option>
+                <option value="No">No Child</option>
+                <option value="1">1 Child</option>
+                <option value="2">2 Children</option>
+              </select>
             </div>
             <input type="url" name="Booked in this URL" id="geturl" required hidden readonly value="">
             <input type="text" name="Device Type" id="deviceType" required hidden readonly value="">

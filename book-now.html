@@ -250,7 +250,7 @@
                     <div>
                       <label class="label">Select Cottage *</label>
                       <select class="form-select" name="Cottage Name" required>
-                        <option value="" disabled selected>Pick Room Type</option>
+                        <option value="" disabled selected>Select Cottage Type</option>
                         <option value="Bangala Comfort">Bangala Comfort</option>
                         <option value="Bangala Suite">Bangala Suite</option>
                         <option value="Bangala Valavu">Bangala Valavu</option>
@@ -274,22 +274,33 @@
                   <div class="form-group">
                     <label class="label">No. of rooms *</label>
 
-                    <input class="form-control" type="number" name="No. of rooms" placeholder="No. of rooms" required>
+                    <input class="form-control" type="number" name="No. of rooms" placeholder="No. of rooms" maxlength="8" required>
                     <div class="invalid-feedback">Please fill out this field.</div>
                   </div>
                 </div>
                 <div class="col-sm col-md-6 gutters-19">
                   <div class="form-group">
                     <label class="label">No. of Adults *</label>
-                    <input class="form-control" type="number" name="No. of Adults" placeholder="No. of Adults" required>
+                    <select class="form-select" name="No. of Adults" required>
+                      <option value="" disabled selected>No. of Adults</option>
+                      <option value="1">1 Adult</option>
+                      <option value="2">2 Adults</option>
+                    </select>
+                    <!-- <input class="form-control" type="number" name="No. of Adults" placeholder="No. of Adults" required> -->
                     <div class="invalid-feedback">Please fill out this field.</div>
                   </div>
                 </div>
                 <div class="col-sm col-md-6 gutters-19">
                   <div class="form-group">
-                    <label class="label">No. of Children *</label>
-                    <input class="form-control" type="number" name="No. of Children" placeholder="No. of Children"
-                      required>
+                    <label class="label">No. of Children (age below 12 years)*</label>
+                    <!-- <input class="form-control" type="number" name="No. of Children" placeholder="No. of Children"
+                      required> -->
+                      <select class="form-select" name="No. of Children" required>
+                        <option value="" disabled selected>No. of Children</option>
+                        <option value="No">No Child</option>
+                        <option value="1">1 Child</option>
+                        <option value="2">2 Children</option>
+                      </select>
                     <div class="invalid-feedback">Please fill out this field.</div>
                   </div>
                 </div>

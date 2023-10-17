@@ -3041,7 +3041,7 @@ button {
 
 #terms ol {
   padding-left: 1rem;
-}
+  list-style-type: "➤ "; }
 
 #terms ol ul {
   padding-left: 1rem;
