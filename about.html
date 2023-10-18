@@ -213,7 +213,8 @@
           </div>
         </div> -->
         <div class="col-lg-5 mb-4 mb-lg-0">
-          <center><img src="logo.png" width="80%" alt="About Chettinad Heritage & Wellness Resorts"></center>
+          <center><img src="logo.png" alt="About Chettinad Heritage & Wellness Resorts" style="max-width: 190px;">
+          </center>
         </div>
         <div class="col-lg-7">
           <div class="">
@@ -266,15 +267,50 @@
   <section class="video-area">
     <div class="container">
       <div class="row justify-content-center align-items-center flex-column text-center">
-        <a id="play-home-video" class="video-play-button" href="https://www.youtube.com/watch?v=vParh5wE-tM">
+        <a id="play-home-video" class="video-play-button" href="#myModal" data-toggle="modal">
           <span></span>
         </a>
         <h3>Chettinad Heritage & Wellness Resorts</h3>
-        <p>Experience Royalty & Rejuvenation! </p>
+        <p>View four has said does men saw find dear shy talent</p>
       </div>
     </div>
   </section>
   <!-- ================ video section end ================= -->
+  <script>
+    $(document).ready(function () {
+      /* Get iframe src attribute value i.e. YouTube video url
+      and store it in a variable */
+      var url = $("#cartoonVideo").attr('src');
+
+      /* Assign empty url value to the iframe src attribute when
+      modal hide, which stop the video playing */
+      $("#myModal").on('hide.bs.modal', function () {
+        $("#cartoonVideo").attr('src', '');
+      });
+
+      /* Assign the initially stored url back to the iframe src
+      attribute when modal is displayed again */
+      $("#myModal").on('show.bs.modal', function () {
+        $("#cartoonVideo").attr('src', url);
+      });
+    });
+  </script>
+  <!-- video Modal  -->
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog  modal-lg  modal-dialog-centered">
+      <div class="modal-content bg-transparent">
+        <div class="modal-header">
+          <button type="button" class="close text-light p-0" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe id="cartoonVideo" class="embed-responsive-item"
+              src="//www.youtube.com/embed/YE7VzlLtp-4?&autoplay=0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ================ welcome section start ================= -->
   <section class="welcome pt-0 section-margin">
@@ -423,7 +459,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-4 col-sm-6 mb-4 mb-xl-0 single-footer-widget" data-wow-duration="1s" data-wow-delay="0.4s">
-          <div class="row d-flex align-items-center">
+          <div class="row d-flex align-items-center pl-3">
             <img src="logo.png" width="50" alt="logo">
             <h6 class="text-light m-0">Chettinad Heritage <br> & Wellness Resorts</h6>
           </div><br>
@@ -439,7 +475,7 @@
             <li><a href="features.html">Features</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact Us</a></li>
-						<li><a href="terms.html">Terms and Policies</a></li>
+            <li><a href="terms.html">Terms and Policies</a></li>
           </ul>
         </div>
 
@@ -454,22 +490,9 @@
           </ul>
         </div>
         <div class="col-xl-4 col-md-6 mb-4 mb-xl-0 single-footer-widget" data-wow-duration="1s" data-wow-delay="1s">
-          <h4>Newsletter</h4>
-          <p>You can trust us. we only send promo offers,</p>
-          <div class="form-wrap" id="mc_embed_signup">
-            <form target="_blank"
-              action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-              method="get" class="form-inline">
-              <input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Your Email Address '" required="" type="email">
-              <button class="click-btn btn btn-default text-uppercase">subscribe</button>
-              <div style="position: absolute; left: -5000px;">
-                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-              </div>
-
-              <div class="info"></div>
-            </form>
-          </div>
+          <img src="https://cdn-icons-png.flaticon.com/512/5581/5581171.png" width="80" alt="Exclusive">
+          <p>" Book directly through our website and enjoy extended <strong>24-hour booking</strong>, double the time
+            you get on other booking sites! Take advantage of this special benefit today. "</p>
         </div>
       </div>
       <div class="footer-bottom row align-items-center text-center text-lg-left">

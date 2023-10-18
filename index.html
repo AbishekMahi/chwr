@@ -276,27 +276,27 @@
               </div>
             </div>
             <div class="col-sm col-md-3 gutters-19">
-              <!-- <div class="form-group">
-                <input class="form-control" type="number" name="No. of Adults" placeholder="No. of Adults" required>
-                <div class="invalid-feedback">Please enter no. of Adults.</div>
-              </div> -->
-              <select class="form-select" name="No. of Adults" required>
-                <option value="" disabled selected>No. of Adults</option>
-                <option value="1">1 Adult</option>
-                <option value="2">2 Adults</option>
-              </select>
+              <div class="form-group">
+                <!-- <input class="form-control" type="number" name="No. of Adults" placeholder="No. of Adults" required>
+                <div class="invalid-feedback">Please enter no. of Adults.</div> -->
+
+                <select class="form-select" name="No. of Adults" required>
+                  <option value="" disabled selected>No. of Adults</option>
+                  <option value="1">1 Adult</option>
+                  <option value="2">2 Adults</option>
+                </select></div>
             </div>
             <div class="col-sm col-md-3 gutters-19">
-              <!-- <div class="form-group">
-                <input class="form-control" type="number" name="No. of Children" placeholder="No. of Children" required>
-                <div class="invalid-feedback">Please enter no. of children.</div>
-              </div> -->
-              <select class="form-select" name="No. of Children" required>
-                <option value="" disabled selected>No. of Children</option>
-                <option value="No">No Child</option>
-                <option value="1">1 Child</option>
-                <option value="2">2 Children</option>
-              </select>
+              <div class="form-group">
+                <!-- <input class="form-control" type="number" name="No. of Children" placeholder="No. of Children" required>
+                <div class="invalid-feedback">Please enter no. of children.</div> -->
+
+                <select class="form-select" name="No. of Children" required>
+                  <option value="" disabled selected>No. of Children</option>
+                  <option value="No">No Child</option>
+                  <option value="1">1 Child</option>
+                  <option value="2">2 Children</option>
+                </select> </div>
             </div>
             <input type="url" name="Booked in this URL" id="geturl" required hidden readonly value="">
             <input type="text" name="Device Type" id="deviceType" required hidden readonly value="">
@@ -347,9 +347,22 @@
       });
     </script>
     <!-- ================ end banner form ================= -->
+    <!-- <div class="container ad bg-porcelain" style="width: 700px;">
+      <div class="row justify-content-center">
+        <div class="col-md-6 p-5">
+          <img src="https://cdn-icons-png.flaticon.com/512/5581/5581171.png" width="80" alt="Exclusive">
+          <p>Book directly through our website and enjoy extended 24-hour booking, double the time you get on other
+            booking sites! Take advantage of this special benefit today.</p>
+          <a class="button button--silent" href="book-now.html">Book Now</a>
+        </div>
+        <div class="col-md-6 ad-banner">
+          <img src="img/gallery/marakkalam.png" alt="Exclusive Banner">
+        </div>
+      </div>
+    </div> -->
 
     <!-- ================ welcome section start ================= -->
-    <section class="welcome">
+    <section class="welcome" id="welcome">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-5 mb-4 mb-lg-0">
@@ -442,7 +455,7 @@
     <section class="video-area">
       <div class="container">
         <div class="row justify-content-center align-items-center flex-column text-center">
-          <a id="play-home-video" class="video-play-button" href="https://youtu.be/m-3y61ThYtI?si=Ur5KX9w3hc9ikqat">
+          <a id="play-home-video" class="video-play-button" href="#myModal" data-toggle="modal">
             <span></span>
           </a>
           <h3>Chettinad Heritage & Wellness Resorts</h3>
@@ -451,6 +464,41 @@
       </div>
     </section>
     <!-- ================ video section end ================= -->
+    <script>
+      $(document).ready(function () {
+        /* Get iframe src attribute value i.e. YouTube video url
+        and store it in a variable */
+        var url = $("#cartoonVideo").attr('src');
+
+        /* Assign empty url value to the iframe src attribute when
+        modal hide, which stop the video playing */
+        $("#myModal").on('hide.bs.modal', function () {
+          $("#cartoonVideo").attr('src', '');
+        });
+
+        /* Assign the initially stored url back to the iframe src
+        attribute when modal is displayed again */
+        $("#myModal").on('show.bs.modal', function () {
+          $("#cartoonVideo").attr('src', url);
+        });
+      });
+    </script>
+    <!-- video Modal  -->
+    <div id="myModal" class="modal fade">
+      <div class="modal-dialog  modal-lg  modal-dialog-centered">
+        <div class="modal-content bg-transparent">
+          <div class="modal-header">
+            <button type="button" class="close text-light p-0" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body p-0">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe id="cartoonVideo" class="embed-responsive-item"
+                src="//www.youtube.com/embed/YE7VzlLtp-4?&autoplay=0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ================ special section start ================= -->
     <section class="section-padding bg-porcelain">
@@ -594,7 +642,7 @@
           <div class="row ">
             <div class="col col-6 col-md-4 amenities">
               <center>
-                <img src="https://cdn-icons-png.flaticon.com/128/2975/2975103.png" width="60" height="60"
+                <img src="https://cdn-icons-png.flaticon.com/128/2975/2975103.png" width="60" height="60" loading="lazy"
                   alt="chettinad lotus">
                 <h5>FREE WIFI</h5>
               </center>
@@ -602,54 +650,56 @@
             <div class="col col-6 col-md-4 amenities active">
               <center>
                 <img src="https://cdn-icons-png.flaticon.com/128/12212/12212348.png" width="60" height="60"
-                  alt="chettinad lotus">
+                  loading="lazy" alt="chettinad lotus">
                 <h5>SAFETY LOCKERS </h5>
               </center>
             </div>
             <div class="col col-6 col-md-4 amenities">
               <center>
-                <img src="https://cdn-icons-png.flaticon.com/128/6794/6794826.png" width="60" height="60"
+                <img src="https://cdn-icons-png.flaticon.com/128/6794/6794826.png" width="60" height="60" loading="lazy"
                   alt="chettinad amenities">
                 <h5>AIR-CONDITIONING </h5>
               </center>
             </div>
             <div class="col col-6 col-md-4 amenities">
               <center>
-                <img src="https://cdn-icons-png.flaticon.com/128/3566/3566955.png" width="60" height="60"
+                <img src="https://cdn-icons-png.flaticon.com/128/3566/3566955.png" width="60" height="60" loading="lazy"
                   alt="chettinad amenities">
                 <h5>SMART TV</h5>
               </center>
             </div>
             <div class="col col-6 col-md-4 amenities">
               <center>
-                <img src="https://cdn-icons-png.flaticon.com/128/4917/4917686.png" width="60" height="60"
+                <img src="https://cdn-icons-png.flaticon.com/128/4917/4917686.png" width="60" height="60" loading="lazy"
                   alt="chettinad amenities">
                 <h5>LAUNDRY SERVICES </h5>
               </center>
             </div>
             <div class="col col-6 col-md-4 amenities">
               <center>
-                <img src="https://cdn-icons-png.flaticon.com/128/3463/3463373.png" width="60" height="60"
+                <img src="https://cdn-icons-png.flaticon.com/128/3463/3463373.png" width="60" height="60" loading="lazy"
                   alt="chettinad amenities">
                 <h5>POWER BACK-UP </h5>
               </center>
             </div>
             <div class="col col-6 col-md-4 amenities">
               <center>
-                <img src="https://cdn-icons-png.flaticon.com/128/433/433143.png" width="60" height="60"
+                <img src="https://cdn-icons-png.flaticon.com/128/433/433143.png" width="60" height="60" loading="lazy"
                   alt="chettinad amenities">
                 <h5>CAB ON HIRE </h5>
               </center>
             </div>
             <div class="col col-6 col-md-4 amenities">
               <center>
-                <img src="https://cdn-icons-png.flaticon.com/128/2706/2706907.png" width="60" alt="chettinad amenities">
+                <img src="https://cdn-icons-png.flaticon.com/128/2706/2706907.png" width="60" loading="lazy"
+                  alt="chettinad amenities">
                 <h5>HELP DESK </h5>
               </center>
             </div>
             <div class="col col-6 col-md-4 amenities">
               <center>
-                <img src="https://cdn-icons-png.flaticon.com/128/90/90821.png" width="60" alt="chettinad amenities">
+                <img src="https://cdn-icons-png.flaticon.com/128/90/90821.png" width="60" loading="lazy"
+                  alt="chettinad amenities">
                 <h5>LIBRARY</h5>
               </center>
             </div>
@@ -679,7 +729,7 @@
                   <div class="testi-carousel__img">
                     <img
                       src="https://lh3.googleusercontent.com/a-/ALV-UjXfWdbKW-CDd0Iy5amxxLSejyk97Wq2qwu1AEbcRVuIyQ=s40-c-rp-mo-br200"
-                      alt="">
+                      alt="testimonials" loading="lazy">
                   </div>
                   <div class="testi-carousel__intro">
                     <h3>Murali</h3>
@@ -696,7 +746,8 @@
                   pool, and attentive staff made it a delight. Hoping to be back soon.</p>
                 <div class="row m-0">
                   <div class="testi-carousel__img">
-                    <img src="https://cdn-icons-png.flaticon.com/128/4140/4140048.png" alt="">
+                    <img src="https://cdn-icons-png.flaticon.com/128/4140/4140048.png" alt="testimonials"
+                      loading="lazy">
                   </div>
                   <div class="testi-carousel__intro">
                     <h3>Azman Wazir</h3>
@@ -713,7 +764,8 @@
                   cultural heritage. Looking forward to seeing you again.</p>
                 <div class="row m-0">
                   <div class="testi-carousel__img">
-                    <img src="https://cdn-icons-png.flaticon.com/128/4140/4140047.png" alt="">
+                    <img src="https://cdn-icons-png.flaticon.com/128/4140/4140047.png" alt="testimonials"
+                      loading="lazy">
                   </div>
                   <div class="testi-carousel__intro">
                     <h3>Corina Rozario</h3>
@@ -732,7 +784,7 @@
                   <div class="testi-carousel__img">
                     <img
                       src="https://lh3.googleusercontent.com/a-/ALV-UjVbhi9dJc8ip7XaAIKYOgUXx7v5wVFnoqrViI5JnJ8J8Bmi=s40-c-rp-mo-br200"
-                      alt="">
+                      alt="testimonials" loading="lazy">
                   </div>
                   <div class="testi-carousel__intro">
                     <h3>AdhiYaman K</h3>
@@ -751,7 +803,7 @@
                   <div class="testi-carousel__img">
                     <img
                       src="https://lh3.googleusercontent.com/a-/ALV-UjUv0EBrn2ovi4MZdBbtwhCCszcwFBBolJq-BUfRhDjkPAbp=s40-c-rp-mo-ba2-br200"
-                      alt="">
+                      alt="testimonials" loading="lazy">
                   </div>
                   <div class="testi-carousel__intro">
                     <h3>Suriya Kanagaraj </h3>
@@ -770,7 +822,7 @@
                   <div class="testi-carousel__img">
                     <img
                       src="https://lh3.googleusercontent.com/a/ACg8ocIVUzNgQy7hwXd4_9RjPsXoCqvaRatyFiAtpPKbBWfP=s40-c-rp-mo-br200"
-                      alt="">
+                      alt="testimonials" loading="lazy">
                   </div>
                   <div class="testi-carousel__intro">
                     <h3>Priyadharshini A</h3>
@@ -789,7 +841,7 @@
                   <div class="testi-carousel__img">
                     <img
                       src="https://lh3.googleusercontent.com/a-/ALV-UjXJbp8-WVD8_2WrVh5vg76e2n1e8yeNYKGQHFhjgLrY0D-X=s40-c-rp-mo-ba3-br200"
-                      alt="">
+                      alt="testimonials" loading="lazy">
                   </div>
                   <div class="testi-carousel__intro">
                     <h3>Suriya Kanagaraj </h3>
@@ -873,7 +925,7 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-4 col-sm-6 mb-4 mb-xl-0 single-footer-widget" data-wow-duration="1s" data-wow-delay="0.4s">
-          <div class="row d-flex align-items-center">
+          <div class="row d-flex align-items-center pl-3">
             <img src="logo.png" width="50" alt="logo">
             <h6 class="text-light m-0">Chettinad Heritage <br> & Wellness Resorts</h6>
           </div><br>
@@ -904,21 +956,9 @@
         </div>
         <!-- offer only on this site  -->
         <div class="col-xl-4 col-md-6 mb-4 mb-xl-0 single-footer-widget" data-wow-duration="1s" data-wow-delay="1s">
-          <h4>Newsletter</h4>
-          <p>You can trust us. we only send promo offers,</p>
-          <div class="form-wrap" id="mc_embed_signup">
-            <form target="_blank"
-              action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-              method="get" class="form-inline">
-              <input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Your Email Address '" required="" type="email">
-              <button class="click-btn btn btn-default text-uppercase">subscribe</button>
-              <div style="position: absolute; left: -5000px;">
-                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-              </div>
-              <div class="info"></div>
-            </form>
-          </div>
+          <img src="https://cdn-icons-png.flaticon.com/512/5581/5581171.png" width="80" alt="Exclusive">
+          <p>" Book directly through our website and enjoy extended <strong>24-hour booking</strong>, double the time
+            you get on other booking sites! Take advantage of this special benefit today. "</p>
         </div>
       </div>
       <div class="footer-bottom row align-items-center text-center text-lg-left">
@@ -937,6 +977,96 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal fade" id="specialOfferModal" tabindex="-1" role="dialog" aria-labelledby="specialOfferModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg  modal-dialog-centered" role="document">
+      <div class="modal-content bg-transparent">
+
+        <div class="modal-body p-0">
+          <button type="button" class="close closead" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="container ad bg-porcelain">
+            <div class="row justify-content-center" style="flex-wrap: wrap-reverse;">
+              <div class="col-md-6 adtext">
+                <img src="https://cdn-icons-png.flaticon.com/512/5581/5581171.png" class="pb-1" width="80" alt="Exclusive">
+                <p>Book directly through our website and enjoy extended 24-hour booking, double the time you get on
+                  other booking sites! Take advantage of this special benefit today.</p>
+                <a class="button button--silent" href="book-now.html">Book Now</a>
+              </div>
+              <div class="col-md-6 ad-banner">
+                <img src="img/gallery/laksmi.jpg" alt="Exclusive Banner">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .adtext {
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .closead {
+      padding: 10px !important;
+      background-color: rgb(189, 198, 198) !important;
+      border-radius: 60px !important;
+      position: absolute;
+      z-index: 9999;
+      right: 10px;
+      top: 10px;
+      line-height: .75;
+    }
+
+    .ad-banner {
+      padding: 0;
+    }
+
+    .ad-banner img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      object-fit: cover;
+    }
+
+    @media (max-width: 420px) {
+      .adtext {
+        padding: 20px 10px;
+        text-align: center;
+      }
+
+      .ad-banner {
+        width: 100%;
+        height: 150px !important;
+      }
+    }
+  </style>
+  <script>
+    // Specify the ID of the element to trigger the modal
+    var triggerElementId = "welcome"; // Replace with the actual ID
+
+    // Get the position (offset) of the trigger element
+    var triggerElement = document.getElementById(triggerElementId);
+    var triggerPosition = triggerElement.offsetTop;
+
+    // Function to check the scroll position
+    function checkScrollPosition() {
+      var currentPosition = window.scrollY;
+
+      // Check if the user has scrolled past the trigger element
+      if (currentPosition > triggerPosition) {
+        $('#specialOfferModal').modal('show');
+        // Remove the event listener to prevent showing the modal repeatedly
+        window.removeEventListener('scroll', checkScrollPosition);
+      }
+    }
+
+    // Add an event listener to call the function when the user scrolls
+    window.addEventListener('scroll', checkScrollPosition);
+  </script>
 
   <!-- ================ End footer Area ================= -->
   <script>
