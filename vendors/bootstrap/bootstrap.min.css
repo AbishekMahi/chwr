@@ -2394,6 +2394,13 @@ textarea.form-control {
     color: #dc3545
 }
 
+.error {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #dc3545
+}
+
 .helper {
     width: 100%;
     margin-top: .25rem;

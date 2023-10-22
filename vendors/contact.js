@@ -12,44 +12,44 @@ $(document).ready(function(){
     $(function() {
         $('#contactForm').validate({
             rules: {
-                name: {
+                Name: {
                     required: true,
                     minlength: 2
                 },
-                subject: {
+                Subject: {
                     required: true,
                     minlength: 4
                 },
-                number: {
+                Number: {
                     required: true,
                     minlength: 5
                 },
-                email: {
+                Email: {
                     required: true,
                     email: true
                 },
-                message: {
+                Message: {
                     required: true,
                     minlength: 20
                 }
             },
             messages: {
-                name: {
+                Name: {
                     required: "come on, you have a name, don't you?",
                     minlength: "your name must consist of at least 2 characters"
                 },
-                subject: {
+                Subject: {
                     required: "come on, you have a subject, don't you?",
                     minlength: "your subject must consist of at least 4 characters"
                 },
-                number: {
+                Number: {
                     required: "come on, you have a number, don't you?",
                     minlength: "your Number must consist of at least 5 characters"
                 },
-                email: {
+                Email: {
                     required: "no email, no message"
                 },
-                message: {
+                Message: {
                     required: "um...yea, you have to write something to send this form.",
                     minlength: "thats all? really?"
                 }

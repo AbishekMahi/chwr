@@ -371,6 +371,10 @@ button {
   margin-right: 0px;
 }
 
+.savuk {
+  line-height: 25px !important;
+}
+
 .header_area .navbar .nav .nav-item.submenu ul .nav-item:last-child {
   border-bottom: none;
 }
@@ -3041,7 +3045,8 @@ button {
 
 #terms ol {
   padding-left: 1rem;
-  list-style-type: "➤ "; }
+  list-style-type: "➤ ";
+}
 
 #terms ol ul {
   padding-left: 1rem;

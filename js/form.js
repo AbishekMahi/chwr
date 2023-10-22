@@ -26,6 +26,15 @@
       );
       form.setAttribute("data-email", "my3forms@gmail.com");
   });
+
+  //  contact Form
+  document.addEventListener("DOMContentLoaded", function () {
+      var form = document.getElementById("contactForm");
+      form.setAttribute("action",
+          "https://script.google.com/macros/s/AKfycbwsTzijr9TYepPa2BkD8zAslAk7r_RQFGcjHQfYlw1QTv7dTGx5eDlay3fMrIN3G4iiOQ/exec"
+      );
+      form.setAttribute("data-email", "my3forms@gmail.com");
+  });
   (function () {
       function validEmail(email) {
           var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
@@ -186,4 +195,4 @@
       } else {
           return "Desktop Device";
       }
-  } 
+  }
